@@ -2,7 +2,7 @@ package net.petrikainulainen.spring.datajpa.todo.repository;
 
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
-import net.petrikainulainen.spring.datajpa.config.PersistenceContext;
+import net.petrikainulainen.spring.datajpa.config.HibernatePersistenceContext;
 import net.petrikainulainen.spring.datajpa.todo.model.Todo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +26,7 @@ import static org.junit.Assert.assertThat;
  * @author Petri Kainulainen
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {PersistenceContext.class})
+@ContextConfiguration(classes = {HibernatePersistenceContext.class})
 //@ContextConfiguration(locations = {"classpath:exampleApplicationContext-persistence.xml"})
 @TestExecutionListeners({ DependencyInjectionTestExecutionListener.class,
         DirtiesContextTestExecutionListener.class,
